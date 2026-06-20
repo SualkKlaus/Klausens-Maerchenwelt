@@ -184,10 +184,20 @@ nav.haupt a:focus {
 
 .untertitel {
   max-width: 660px;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   color: var(--muted);
   font-size: clamp(1.25rem, 2.6vw, 1.75rem);
   font-style: italic;
+}
+
+.hero-herkunft {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  color: #f1dfad;
+  font-size: clamp(1.05rem, 2vw, 1.38rem);
+  font-style: italic;
+  line-height: 1.45;
+  text-shadow: 0 0 18px rgba(230, 191, 106, 0.18);
 }
 
 .btn-gold,
@@ -226,22 +236,6 @@ nav.haupt a:focus {
 
 main {
   width: 100%;
-}
-
-.herkunft {
-  max-width: 820px;
-  margin: -3rem auto 4rem;
-  padding: 0 clamp(1.2rem, 5vw, 3rem);
-  text-align: center;
-}
-
-.herkunft p {
-  margin: 0;
-  color: #f1dfad;
-  font-size: clamp(1.18rem, 2.2vw, 1.58rem);
-  font-style: italic;
-  line-height: 1.55;
-  text-shadow: 0 0 18px rgba(230, 191, 106, 0.16);
 }
 
 #geschichten {
