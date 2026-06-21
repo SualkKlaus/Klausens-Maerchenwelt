@@ -369,6 +369,28 @@ main {
   font-style: italic;
 }
 
+.audio-box {
+  max-width: 680px;
+  margin: 0 auto 1.8rem;
+  padding: 1rem;
+  background: rgba(8, 7, 13, 0.58);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.audio-box p {
+  margin: 0 0 0.65rem;
+  color: var(--gold);
+  font-family: Cinzel, Georgia, serif;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.audio-box audio {
+  display: block;
+  width: 100%;
+}
+
 .text {
   padding: clamp(1.2rem, 4vw, 2.4rem);
   background: rgba(8, 7, 13, 0.58);
