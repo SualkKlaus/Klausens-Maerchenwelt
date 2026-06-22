@@ -7,28 +7,113 @@
 <title>Klausens Märchenwelt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-<div id="sterne" aria-hidden="true"></div>
-<div class="mond" aria-hidden="true"></div>
+
+<!-- Canvas für Sterne, Raben, Funken, Nebel -->
+<canvas id="nacht-canvas" aria-hidden="true"></canvas>
+
+<!-- Traumschleier -->
+<div class="traum-himmel" aria-hidden="true">
+  <span class="schleier s1"></span>
+  <span class="schleier s2"></span>
+  <span class="schleier s3"></span>
+  <span class="sternenstaub st1"></span>
+  <span class="sternenstaub st2"></span>
+</div>
+
+<!-- Mond -->
+<div class="mond" aria-hidden="true">
+  <div class="mond-krater k1"></div>
+  <div class="mond-krater k2"></div>
+  <div class="mond-krater k3"></div>
+  <div class="mond-gesicht">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path class="mond-schatten" d="M78 18C66 24 59 38 60 54c1 18 10 30 24 36C74 97 59 99 44 94 18 85 5 56 15 31 24 8 52-2 78 18Z"/>
+      <path class="mond-braue links" d="M27 34c5-5 12-6 18-2"/>
+      <path class="mond-braue rechts" d="M56 32c6-4 14-3 18 2"/>
+      <path class="mond-auge links" d="M28 43c5 6 13 6 18 0"/>
+      <path class="mond-auge rechts" d="M55 43c5 6 13 6 18 0"/>
+      <path class="mond-nase" d="M49 47c-3 5-4 10-1 14 2 2 6 1 7-2"/>
+      <path class="mond-mund" d="M38 68c7 8 19 8 26 0"/>
+      <ellipse class="mond-wange links" cx="29" cy="58" rx="9" ry="6"/>
+      <ellipse class="mond-wange rechts" cx="72" cy="58" rx="9" ry="6"/>
+      <path class="mond-lichtpunkt" d="M30 22c7-5 18-8 29-5"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Silhouetten: Bäume & Hügel -->
+<div class="silhouetten" aria-hidden="true">
+  <svg viewBox="0 0 1366 300" preserveAspectRatio="xMidYMax slice" class="hintergrund-baeume">
+    <path d="M0,300 L0,200 Q50,180 80,210 L90,150 L100,210 Q130,190 160,220 L170,120 L185,220 Q210,200 240,230 L250,160 L265,230 Q300,210 330,240 L345,130 L360,240 Q400,220 430,250 L445,170 L460,250 Q500,230 530,250 L545,140 L560,250 Q600,230 630,255 L645,180 L660,255 Q700,235 730,255 L745,150 L760,255 Q800,235 830,258 L845,170 L860,258 Q900,238 930,258 L945,160 L960,258 Q1000,238 1030,260 L1045,190 L1060,260 Q1100,240 1130,260 L1145,170 L1160,260 Q1200,240 1230,260 L1245,150 L1260,260 Q1300,240 1330,265 L1345,200 L1366,265 L1366,300 Z" fill="#0a0f1a"/>
+  </svg>
+  <svg viewBox="0 0 1366 200" preserveAspectRatio="xMidYMax slice" class="vordergrund-baeume">
+    <path d="M0,200 L0,160 L20,120 L25,160 L40,100 L50,160 L70,130 L80,160 L100,90 L110,160 L130,110 L140,160 L160,70 L175,160 L195,100 L210,160 L230,80 L245,160 L270,120 L285,160 L310,90 L325,160 L350,110 L365,160 L390,70 L405,160 L430,100 L445,160 L470,120 L485,160 L510,80 L525,160 L550,110 L565,160 L590,90 L605,160 L630,100 L645,160 L670,70 L685,160 L710,120 L725,160 L750,90 L765,160 L790,110 L805,160 L830,80 L845,160 L870,100 L885,160 L910,120 L925,160 L950,90 L965,160 L990,70 L1005,160 L1030,110 L1045,160 L1070,100 L1085,160 L1110,80 L1125,160 L1150,120 L1165,160 L1190,90 L1205,160 L1230,70 L1245,160 L1270,100 L1285,160 L1310,110 L1325,160 L1350,80 L1366,160 L1366,200 Z" fill="#05080f"/>
+  </svg>
+</div>
+
+<!-- Glühwürmchen -->
+<div class="gluehwuermchen-container" aria-hidden="true">
+  <span class="gluehwuermchen g1"></span>
+  <span class="gluehwuermchen g2"></span>
+  <span class="gluehwuermchen g3"></span>
+  <span class="gluehwuermchen g4"></span>
+  <span class="gluehwuermchen g5"></span>
+  <span class="gluehwuermchen g6"></span>
+</div>
+
 <div class="seite">
 <nav class="haupt" aria-label="Hauptnavigation">
-  <a class="marke" href="index.html">Klausens Märchenwelt</a>
+  <a class="marke" href="index.html">✦ Klausens Märchenwelt</a>
   <ul>
     <li><a href="index.html">Startseite</a></li>
     <li><a href="index.html#geschichten">Geschichten</a></li>
   </ul>
 </nav>
+
 <header class="hero" id="inhalt">
+  <div class="hero-sterne" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <p class="hero-zusatz">Storyteller KI</p>
-  <h1>Klausens Märchenwelt</h1>
-  <p class="untertitel">Neun stille KI-Gute-Nachtgeschichten, an manchen Gesprächsabenden für Klaus erfunden.</p>
-  <p class="hero-herkunft">Diese Märchen wurden an manchen Gesprächsabenden von einer KI für Klaus als Gute-Nacht-Geschichten erfunden.</p>
-  <a class="btn-gold" href="#geschichten">Geschichten öffnen</a>
-  <div class="trenner"></div>
+  <h1 class="hero-titel" aria-label="Klausens Märchenwelt">
+    <span class="titel-zeile" aria-hidden="true">
+      <span class="titel-buchstabe" style="--i:0">K</span>
+      <span class="titel-buchstabe" style="--i:1">l</span>
+      <span class="titel-buchstabe" style="--i:2">a</span>
+      <span class="titel-buchstabe" style="--i:3">u</span>
+      <span class="titel-buchstabe" style="--i:4">s</span>
+      <span class="titel-buchstabe" style="--i:5">e</span>
+      <span class="titel-buchstabe" style="--i:6">n</span>
+      <span class="titel-buchstabe" style="--i:7">s</span>
+    </span>
+    <span class="titel-zeile" aria-hidden="true">
+      <span class="titel-buchstabe" style="--i:8">M</span>
+      <span class="titel-buchstabe" style="--i:9">ä</span>
+      <span class="titel-buchstabe" style="--i:10">r</span>
+      <span class="titel-buchstabe" style="--i:11">c</span>
+      <span class="titel-buchstabe" style="--i:12">h</span>
+      <span class="titel-buchstabe" style="--i:13">e</span>
+      <span class="titel-buchstabe" style="--i:14">n</span>
+      <span class="titel-buchstabe" style="--i:15">w</span>
+      <span class="titel-buchstabe" style="--i:16">e</span>
+      <span class="titel-buchstabe" style="--i:17">l</span>
+      <span class="titel-buchstabe" style="--i:18">t</span>
+    </span>
+  </h1>
+  <p class="untertitel">Neun stille Geschichten vom Rand der Welt, vom Sternenstaub und vom Verstehen.</p>
+  <a class="btn-gold" href="#geschichten">
+    <span>Geschichten öffnen</span>
+  </a>
+  <div class="trenner">
+    <span class="trenner-symbol">✦</span>
+  </div>
 </header>
 
 <main>
