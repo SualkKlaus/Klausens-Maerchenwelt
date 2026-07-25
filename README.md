@@ -1,8 +1,9 @@
 # Klausens Maerchenwelt
 
-Eine statische Webseite mit neun poetischen Maerchen und Illustrationen.
+Eine statische Webseite mit 11 poetischen Maerchen und Illustrationen.
 
-Die Startseite ist `index.html`. GitHub Pages kann direkt aus dem `main`-Branch veroeffentlichen.
-hiermit direkt öffnen:
+Die Startseite ist `index.html`. Die Quelldateien liegen im `main`-Branch; GitHub Pages wird über `gh-pages` veröffentlicht.
+
+Hiermit direkt öffnen:
 
 https://sualkklaus.github.io/Klausens-Maerchenwelt/index.html
