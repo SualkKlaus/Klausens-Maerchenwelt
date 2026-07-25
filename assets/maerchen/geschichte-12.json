@@ -1,0 +1,13 @@
+{
+  "skill_version": "2.0",
+  "nummer": 12,
+  "titel": "Der kluge Wurm Wendelin und der Specht",
+  "kurztext": "Wie ein kleiner Wurm mit Witz sein Leben rettete und einen Freund fürs Leben gewann.",
+  "erstellt": "2026-07-25 20:45:27",
+  "html": "geschichte-12.html",
+  "text": "assets/audio/geschichte-12.txt",
+  "audio": "assets/audio/geschichte-12.mp3",
+  "bild": "assets/bilder/geschichte-12.png",
+  "bild_prompt": "A warm, detailed fairy-tale book illustration of a small, brave earthworm on the bark of an old oak tree in a sunlit forest, talking to a colorful woodpecker sitting on a branch, high resolution, storybook style, no text, no watermark, 16:9 aspect ratio.",
+  "github_hochgeladen": false
+}
