@@ -1,0 +1,13 @@
+{
+  "skill_version": "2.0",
+  "nummer": 10,
+  "titel": "Der alte Uhrmacher Jakob und der silberne Ring",
+  "kurztext": "Der Uhrmacher Jakob entdeckt einen magischen Ring, der die Zeit im Einklang mit den Gefühlen schlagen lässt.",
+  "erstellt": "2026-07-25 19:58:49",
+  "html": "geschichte-10.html",
+  "text": "assets/audio/geschichte-10.txt",
+  "audio": "assets/audio/geschichte-10.mp3",
+  "bild": "assets/bilder/geschichte-10.png",
+  "bild_prompt": "A warm detailed fairy-tale book illustration of an old watchmaker in a cozy workshop filled with vintage clocks, holding a tiny glowing silver ring near clockwork gears, soft autumnal evening light, magical atmosphere, high detail, 16:9, no text, no logo, no watermark.",
+  "github_hochgeladen": false
+}

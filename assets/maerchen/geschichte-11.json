@@ -1,0 +1,13 @@
+{
+  "skill_version": "2.0",
+  "nummer": 11,
+  "titel": "Die verschwiegene Hüterin und die silberne Spindel",
+  "kurztext": "Eine treulose Magd raubt einer Prinzessin den Stand, doch am Wiesenbach offenbart sich die Wahrheit.",
+  "erstellt": "2026-07-25 20:05:19",
+  "html": "geschichte-11.html",
+  "text": "assets/audio/geschichte-11.txt",
+  "audio": "assets/audio/geschichte-11.mp3",
+  "bild": "assets/bilder/geschichte-11.png",
+  "bild_prompt": null,
+  "github_hochgeladen": false
+}
